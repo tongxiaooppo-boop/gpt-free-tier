@@ -23,7 +23,7 @@
 ## 下一步
 
 1. 第 3～5 輪瀏覽器實測：使用者 2026-11-19 決定不測、視為通過。
-2. 上線：astra 2026-11-20 確認；信箱／金鑰檢查無誤；GitHub repo `gpt-free-tier` 已於 2026-11-20 **公開**。公開前歷史已壓成單一 commit（本檔提到的舊 commit hash 只存在本機備份分支 `backup/pre-public-2026-11-20`，遠端沒有）。公開前改：OpenAI 說明全文翻譯改成作者自寫重點摘要（避免重散布官方文章），程式註解的本機路徑改成「作者的 law／where 專案」。顯示名稱已改「Free Tier Chat」（避開 GPT 商標；repo／package 名、LOCK_NAME 不動以免影響既有資料）。未做：GitHub Pages 未開。
+2. 上線：astra 2026-11-20 確認；信箱／金鑰檢查無誤；GitHub repo `gpt-free-tier` 已於 2026-11-20 **公開**。公開前歷史已壓成單一 commit（本檔提到的舊 commit hash 只存在本機備份分支 `backup/pre-public-2026-11-20`，遠端沒有）。公開前改：OpenAI 說明全文翻譯改成作者自寫重點摘要（避免重散布官方文章），程式註解的本機路徑改成「作者的 law／where 專案」。顯示名稱已改「Free Tier Chat」（避開 GPT 商標；repo／package 名、LOCK_NAME 不動以免影響既有資料）。GitHub Pages 已開（`.github/workflows/pages.yml`，push master 自動跑測試＋build＋部署），網址 https://tongxiaooppo-boop.github.io/gpt-free-tier/ ；README 附手機版截圖（`docs/screenshots/`，Playwright 390×844 截，金鑰用假值）。
 3. 選項（有需求再做）：常用法規包（約 20 部、壓縮後估 1 MB 內）。完整法規下載不做（法律 37.5 MB＋搜尋引擎＋每週同步）。
 
 ## 決定紀錄（2026-11-19，使用者）

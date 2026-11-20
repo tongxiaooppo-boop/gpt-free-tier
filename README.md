@@ -22,6 +22,12 @@
 完整條款：[英文原文（OpenAI 官方）](https://help.openai.com/en/articles/10306912-sharing-feedback-evaluation-and-fine-tuning-data-and-api-inputs-and-outputs-with-openai)｜[中文重點摘要（非官方，以原文為準）](docs/openai-sharing.zh-TW.md)。
 OpenAI 可能在提前 30 天通知後終止計畫，請定期到後台（Analytics → 使用情況）確認費用為 0。
 
+## 畫面（手機版）
+
+| 開始前告知 | 首頁 | 卡片（翻譯） | 東西放哪 |
+|---|---|---|---|
+| <img src="docs/screenshots/1-consent.png" width="200"> | <img src="docs/screenshots/3-home.png" width="200"> | <img src="docs/screenshots/4-card.png" width="200"> | <img src="docs/screenshots/5-where.png" width="200"> |
+
 ## 支援模型與每日額度
 
 | 額度組 | 模型 | Build 方案 | Launch／Grow 方案 |
@@ -34,7 +40,7 @@ OpenAI 可能在提前 30 天通知後終止計畫，請定期到後台（Analyt
 
 ## 安裝
 
-**公開網址**：待作者發佈後補上。
+**公開網址**：https://tongxiaooppo-boop.github.io/gpt-free-tier/ （用瀏覽器打開就能用，不用下載程式；想像 App 一樣使用，再照下面「加到主畫面」安裝）
 
 **本機執行**
 
@@ -46,6 +52,8 @@ OpenAI 可能在提前 30 天通知後終止計畫，請定期到後台（Analyt
 
 - 電腦或 Android 的 Chrome：打開網址後，按網址列右邊的「安裝應用程式」圖示，或選單裡的「安裝應用程式」。
 - iPhone 的 Safari：打開網址後，按下方的分享鈕，選「加入主畫面」。
+
+安裝後會有自己的圖示，沒有網路也能打開畫面；送出問題仍需連網。
 
 ## 授權
 
