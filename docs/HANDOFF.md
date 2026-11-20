@@ -15,6 +15,8 @@
 - 第 5 輪 Opus 定的事：where 不搬地點階層、分類、照片，只存名稱＋位置＋原話；「某地方有什麼」改用位置字串包含；找東西本機失敗時送整份「名稱｜位置」（不送原話）；每次用 AI 前都要使用者按確認；voice 告知 mustAck=false、不改 NOTICE_VERSION；footer 不送模型、不存紀錄、不進匯出。
 - **使用者文件（2026-11-20）**：Sonnet 寫 `eb16eba`（SETUP 第 5 步改 Analytics → 使用情況 → 處理層級、同步 setupSteps.ts；新增 `docs/NOTICES.md` 注意事項、`docs/MANUAL.md` 說明書；README 加連結與安裝段），Opus 驗收 102/102、TSC 0、無信箱金鑰，補修 `fbc953c`。待確認：手機分享選單（Web Share Target）部署後行為未寫進說明書；`NOTICE_VERSION` 仍 2026-11-19（告知內容沒變，不需改）。
 
+- **相關（2026-11-20）**：gptstudio 同步加入 gpt-6-astra、gpt-5.6-terra（`700bc06`，CLI／ask-file `--astra`／`--terra`，實測各一則皆記入正確額度組）；MCP `ask_gpt` 需重開才看得到新模型。
+
 ## 設計
 
 - 三套 UI 樣稿（A 清爽卡片／B 深色工作台／C 大字親和）：https://claude.ai/artifact/29bKf5EmzxxAC8TwaJjdpU 。**使用者選 C。**
