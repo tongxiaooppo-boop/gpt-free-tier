@@ -1,4 +1,4 @@
-# GPT Free Tier Chat
+# Free Tier Chat
 
 只用 **OpenAI「資料共享」每日免費額度** 的聊天程式。純網頁（PWA），可以加到手機或電腦主畫面。
 使用你自己的 OpenAI API 金鑰，金鑰只存在你的瀏覽器，不會上傳到任何其他伺服器。

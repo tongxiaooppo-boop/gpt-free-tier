@@ -89,7 +89,7 @@ export default function App() {
     </article>);
   }
   return <>
-    {!["consent", "setup", "doc"].includes(page) && <header className="app-header"><button disabled={busy} className="brand" onClick={() => go("home")}>GPT Free Tier</button>
+    {!["consent", "setup", "doc"].includes(page) && <header className="app-header"><button disabled={busy} className="brand" onClick={() => go("home")}>Free Tier Chat</button>
       <nav aria-label="主要分頁">{([['home', '首頁', '⌂'], ['history', '紀錄', '▤'], ['settings', '設定', '⚙']] as const).map(([target, label, icon]) => <button key={target} disabled={busy} aria-current={page === target || (target === "home" && (page === "card" || page === "where")) ? "page" : undefined} onClick={() => { if (target === "settings") { setKeyDraft(settings.apiKey); if (day) setExternal({ small: String(day.externalUsed.small), large: String(day.externalUsed.large) }); } go(target); }}><span aria-hidden="true">{icon}</span>{label}</button>)}</nav>
     </header>}
     <main>
