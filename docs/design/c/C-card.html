@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>C 手機卡片頁</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&amp;family=Noto+Serif+TC:wght@700&amp;display=swap">
+<style>body{margin:0}a{color:#2F4FA8}a:hover{color:#1E3780}</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #FBF7F0; color: #1F2430; font-family: 'Noto Sans TC', system-ui, sans-serif; display: flex; flex-direction: column; overflow: hidden">
+  <header style="display: flex; align-items: center; gap: 10px; padding: 14px 18px 6px">
+    <a href="C-home.dc.html" style="text-decoration: none; height: 44px; padding: 0 14px 0 8px; border-radius: 22px; background: #FFFFFF; border: 1px solid #E8E0D2; display: flex; align-items: center; gap: 4px; color: #1F2430; font-size: 16px">
+      <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"></path></svg>返回</a>
+  </header>
+  <div style="padding: 6px 18px 0; display: flex; flex-direction: column; gap: 14px; flex-grow: 1; overflow: hidden">
+    <h1 style="margin: 0; font-family: 'Noto Serif TC', serif; font-size: 28px">拍照翻譯</h1>
+    <div style="display: flex; flex-direction: column; gap: 8px">
+      <div style="font-size: 16px; font-weight: 700"><span style="color: #2F4FA8">第 1 步</span>　拍一張照片</div>
+      <div style="display: flex; gap: 12px; align-items: center; background: #FFFFFF; border: 1px solid #E8E0D2; border-radius: 16px; padding: 10px">
+        <div style="width: 84px; height: 84px; border-radius: 12px; background: #E9E3D8; color: #4A5060; font-size: 13px; display: flex; align-items: center; justify-content: center; text-align: center">菜單照片</div>
+        <button style="flex-grow: 1; height: 52px; border: 2px solid #2F4FA8; border-radius: 14px; background: #FFFFFF; color: #2F4FA8; font: inherit; font-size: 17px; font-weight: 700">重新拍照</button>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 8px">
+      <label style="font-size: 16px; font-weight: 700"><span style="color: #2F4FA8">第 2 步</span>　要翻成什麼語言</label>
+      <select style="height: 52px; border: 1px solid #D8CFBF; border-radius: 14px; background: #FFFFFF; padding: 0 14px; font: inherit; font-size: 17px; color: #1F2430"><option>繁體中文</option></select>
+    </div>
+    <button style="height: 56px; border: 0; border-radius: 16px; background: #2F4FA8; color: #FFFFFF; font: inherit; font-size: 19px; font-weight: 700">開始翻譯</button>
+    <section style="background: #FFFFFF; border: 1px solid #E8E0D2; border-radius: 18px; padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; flex-grow: 1; overflow: hidden">
+      <div style="font-size: 14px; color: #4A5060">翻譯結果</div>
+      <div style="font-size: 18px; line-height: 1.7">親子丼（雞肉滑蛋蓋飯）　850 日圓<br>豆皮烏龍麵　720 日圓</div>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 4px">
+        <button style="height: 48px; border: 1px solid #D8CFBF; border-radius: 12px; background: #FFFFFF; font: inherit; font-size: 16px; color: #1F2430">複製</button>
+        <button style="height: 48px; border: 1px solid #D8CFBF; border-radius: 12px; background: #FFFFFF; font: inherit; font-size: 16px; color: #1F2430">再翻一次</button>
+      </div>
+      <div style="font-size: 13px; color: #4A5060">使用 gpt-5.6-luna（可在設定更換）</div>
+    </section>
+  </div>
+  <div style="height: 16px"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

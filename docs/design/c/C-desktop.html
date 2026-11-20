@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>C 桌面</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&amp;family=Noto+Serif+TC:wght@700&amp;display=swap">
+<style>body{margin:0}a{color:#2F4FA8}a:hover{color:#1E3780}</style>
+</helmet>
+<div style="width: 1280px; height: 844px; box-sizing: border-box; background: #FBF7F0; color: #1F2430; font-family: 'Noto Sans TC', system-ui, sans-serif; display: flex; flex-direction: column; overflow: hidden">
+  <header style="display: flex; justify-content: space-between; align-items: center; padding: 16px 48px; background: #FFFFFF; border-bottom: 1px solid #E8E0D2">
+    <div style="font-family: 'Noto Serif TC', serif; font-size: 22px; font-weight: 700">GPT Free Tier</div>
+    <nav style="display: flex; gap: 8px">
+      <a href="#" style="text-decoration: none; height: 44px; padding: 0 18px; border-radius: 22px; background: #2F4FA8; color: #FFFFFF; font-size: 16px; font-weight: 700; display: flex; align-items: center">首頁</a>
+      <a href="#" style="text-decoration: none; height: 44px; padding: 0 18px; border-radius: 22px; color: #1F2430; font-size: 16px; display: flex; align-items: center">紀錄</a>
+      <a href="#" style="text-decoration: none; height: 44px; padding: 0 18px; border-radius: 22px; color: #1F2430; font-size: 16px; display: flex; align-items: center">設定</a>
+    </nav>
+  </header>
+  <div style="flex-grow: 1; display: flex; gap: 32px; padding: 28px 48px; min-height: 0">
+    <main style="flex-grow: 1; display: flex; flex-direction: column; gap: 18px; min-width: 0">
+      <h1 style="margin: 0; font-family: 'Noto Serif TC', serif; font-size: 32px">今天想做什麼？</h1>
+      <sc-for list="{{groups}}" as="g" hint-placeholder-count="4">
+        <div style="display: flex; flex-direction: column; gap: 8px">
+          <div style="font-size: 15px; font-weight: 700; color: #4A5060">{{g.name}}</div>
+          <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px">
+            <sc-for list="{{g.items}}" as="c" hint-placeholder-count="3">
+              <a href="#" style="text-decoration: none; color: #1F2430; background: #FFFFFF; border: 1px solid #E8E0D2; border-radius: 16px; padding: 12px 14px; display: flex; align-items: center; gap: 12px">
+                <span style="width: 40px; height: 40px; flex-shrink: 0; border-radius: 12px; background: #2F4FA8; color: #FFFFFF; font-size: 18px; font-weight: 700; display: flex; align-items: center; justify-content: center">{{c.g}}</span>
+                <span style="display: flex; flex-direction: column">
+                  <span style="font-size: 17px; font-weight: 700">{{c.t}}</span>
+                  <span style="font-size: 13px; color: #4A5060">{{c.d}}</span>
+                </span>
+              </a>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </main>
+    <aside style="width: 300px; flex-shrink: 0; display: flex; flex-direction: column; gap: 14px">
+      <div style="background: #FFFFFF; border: 1px solid #E8E0D2; border-radius: 18px; padding: 18px; display: flex; flex-direction: column; gap: 10px">
+        <div style="font-size: 17px; font-weight: 700">今天的免費額度還剩</div>
+        <div style="background: #EEF2FB; border-radius: 12px; padding: 12px 14px">
+          <div style="font-size: 14px; color: #4A5060">大組 sol・astra</div>
+          <div style="font-size: 28px; font-weight: 700; color: #2F4FA8">82%</div>
+          <div style="font-size: 13px; color: #4A5060">已用 42K / 上限 237K</div>
+        </div>
+        <div style="background: #EEF2FB; border-radius: 12px; padding: 12px 14px">
+          <div style="font-size: 14px; color: #4A5060">小組 luna・terra</div>
+          <div style="font-size: 28px; font-weight: 700; color: #2F4FA8">87%</div>
+          <div style="font-size: 13px; color: #4A5060">已用 312K / 上限 2,375K</div>
+        </div>
+        <div style="font-size: 13px; color: #4A5060">每天早上 8 點（台灣）重新計算</div>
+      </div>
+      <div style="background: #FFF1DC; border-radius: 16px; padding: 14px 16px; font-size: 15px; line-height: 1.7">
+        <div style="font-weight: 700">使用前請注意</div>
+        <div>・無法上網查資料</div>
+        <div>・內容會分享給 OpenAI</div>
+        <div>・請勿輸入私密資訊</div>
+      </div>
+    </aside>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { groups: [
+      { name: '拍照', items: [ { g: '拍', t: '拍照翻譯', d: '菜單、路標、說明書' }, { g: '字', t: '拍照轉文字', d: '把照片裡的字打出來' }, { g: '錯', t: '錯誤訊息解讀', d: '貼訊息或截圖' } ] },
+      { name: '文字', items: [ { g: '譯', t: '翻譯', d: '保留格式與專有名詞' }, { g: '摘', t: '摘要', d: '整理成重點條列' }, { g: '改', t: '改寫潤稿', d: '換語氣或長度' }, { g: '文', t: '文法檢查', d: '逐句找錯並說明' }, { g: '白', t: '易讀版改寫', d: '公文通知改成白話' }, { g: '聊', t: '自由對話', d: '一般問答' } ] },
+      { name: '創作', items: [ { g: '貼', t: '一稿多平台貼文', d: 'FB、IG、X、Threads' }, { g: '簡', t: '簡報大綱', d: '逐頁大綱與講稿' }, { g: '點', t: '點子產生器', d: '一次 10 個並分類' } ] }
+    ] };
+  }
+}
+</script>
+</body>
+</html>
