@@ -71,7 +71,7 @@ export const CARDS: readonly Card[] = [
     badge: "聊",
     tagline: "一般問答",
     description: "一般問答。無法上網，答案只來自模型訓練資料。",
-    defaultModel: "gpt-5.6-luna",
+    defaultModel: "gpt-5.6-terra",
     fields: [{ id: "text", label: "訊息", kind: "textarea", required: true, maxChars: 20_000 }],
     instructions: "用使用者的語言回答，繁體中文使用台灣用語。你無法上網，涉及即時資訊時要明說可能過時。",
     userTemplate: "{{text}}",
@@ -87,7 +87,7 @@ export const CARDS: readonly Card[] = [
     badge: "譯",
     tagline: "保留格式與專有名詞",
     description: "整段翻譯，保留格式、數字與專有名詞。",
-    defaultModel: "gpt-5.6-luna",
+    defaultModel: "gpt-5.6-terra",
     fields: [
       { id: "target", label: "翻成", kind: "select", options: LANGS, default: "繁體中文", required: true },
       { id: "text", label: "原文", kind: "textarea", required: true, maxChars: 12_000 },
@@ -111,7 +111,7 @@ export const CARDS: readonly Card[] = [
     badge: "摘",
     tagline: "整理成重點條列",
     description: "把文章整理成重點條列。",
-    defaultModel: "gpt-5.6-luna",
+    defaultModel: "gpt-5.6-terra",
     fields: [
       { id: "length", label: "長度", kind: "select", options: ["3 點", "5 點", "10 點"], default: "5 點", required: true },
       { id: "text", label: "原文", kind: "textarea", required: true, maxChars: 30_000 },
@@ -134,7 +134,7 @@ export const CARDS: readonly Card[] = [
     badge: "改",
     tagline: "換語氣或長度",
     description: "換語氣或長度，不改事實。",
-    defaultModel: "gpt-5.6-luna",
+    defaultModel: "gpt-5.6-terra",
     fields: [
       {
         id: "style",
@@ -164,7 +164,7 @@ export const CARDS: readonly Card[] = [
     badge: "文",
     tagline: "逐句找錯並說明",
     description: "逐句找出錯誤並說明原因。",
-    defaultModel: "gpt-5.6-luna",
+    defaultModel: "gpt-5.6-terra",
     fields: [{ id: "text", label: "要檢查的文字", kind: "textarea", required: true, maxChars: 6_000 }],
     instructions:
       "檢查 <input> 內容的文法、拼字與用字。用 Markdown 表格輸出三欄：原句｜修正後｜原因（原因用繁體中文）。" +
@@ -184,7 +184,7 @@ export const CARDS: readonly Card[] = [
     badge: "白",
     tagline: "公文通知改成白話",
     description: "把公文、通知、說明書改成白話短句，先列出你要做什麼。",
-    defaultModel: "gpt-5.6-luna",
+    defaultModel: "gpt-5.6-terra",
     fields: [{ id: "text", label: "原文", kind: "textarea", required: true, maxChars: 8_000 }],
     instructions:
       "把 <input> 內容改寫成國中生也看得懂的白話繁體中文（台灣用語）。先輸出「重點」三項：你要做什麼、期限、金額或數量（原文沒有就寫「原文未提」）；" +
@@ -204,7 +204,7 @@ export const CARDS: readonly Card[] = [
     badge: "貼",
     tagline: "FB、IG、X、Threads、LinkedIn",
     description: "一段素材改成 Facebook、Instagram、X、Threads、LinkedIn 各一版。",
-    defaultModel: "gpt-5.6-luna",
+    defaultModel: "gpt-5.6-terra",
     fields: [
       { id: "tone", label: "語氣", kind: "select", options: ["輕鬆", "專業", "熱情", "幽默"], default: "輕鬆", required: true },
       { id: "text", label: "素材", kind: "textarea", required: true, maxChars: 4_000 },
@@ -227,7 +227,7 @@ export const CARDS: readonly Card[] = [
     badge: "簡",
     tagline: "逐頁大綱與講稿",
     description: "文章變成逐頁大綱與講稿。",
-    defaultModel: "gpt-5.6-luna",
+    defaultModel: "gpt-5.6-terra",
     fields: [
       { id: "pages", label: "頁數", kind: "select", options: ["5", "10", "15"], default: "10", required: true },
       { id: "text", label: "內容", kind: "textarea", required: true, maxChars: 20_000 },
@@ -250,7 +250,7 @@ export const CARDS: readonly Card[] = [
     badge: "點",
     tagline: "一次 10 個並分類",
     description: "禮物、命名、活動、標題，一次給 10 個並分類。",
-    defaultModel: "gpt-5.6-luna",
+    defaultModel: "gpt-5.6-terra",
     fields: [
       { id: "kind", label: "類型", kind: "select", options: ["禮物", "命名", "活動", "標題"], default: "禮物", required: true },
       { id: "text", label: "條件（對象、預算、風格…）", kind: "textarea", required: true, maxChars: 2_000 },
@@ -271,7 +271,7 @@ export const CARDS: readonly Card[] = [
     badge: "錯",
     tagline: "貼訊息或截圖",
     description: "貼錯誤訊息或截圖，說明原因與下一步。",
-    defaultModel: "gpt-5.6-luna",
+    defaultModel: "gpt-5.6-terra",
     fields: [
       { id: "text", label: "錯誤訊息（可留空改附截圖）", kind: "textarea", required: false, maxChars: 8_000 },
       { id: "image", label: "截圖", kind: "image", required: false },
@@ -294,7 +294,7 @@ export const CARDS: readonly Card[] = [
     badge: "拍",
     tagline: "菜單、路標、說明書",
     description: "拍菜單、路標、說明書，輸出原文與譯文。",
-    defaultModel: "gpt-5.6-luna",
+    defaultModel: "gpt-5.6-terra",
     fields: [
       { id: "target", label: "翻成", kind: "select", options: LANGS, default: "繁體中文", required: true },
       { id: "image", label: "照片", kind: "image", required: true },
@@ -316,7 +316,7 @@ export const CARDS: readonly Card[] = [
     badge: "字",
     tagline: "把照片裡的字打出來",
     description: "把照片或截圖裡的文字轉成可複製的文字。",
-    defaultModel: "gpt-5.6-luna",
+    defaultModel: "gpt-5.6-terra",
     fields: [{ id: "image", label: "照片", kind: "image", required: true }],
     instructions:
       "把圖片中的文字逐行原樣輸出，保留段落與表格結構（表格用 Markdown）。不翻譯、不加說明、不修正錯字。看不清楚的字寫 [?]。" +
@@ -364,7 +364,7 @@ export const CARDS: readonly Card[] = [
     tagline: "貼上條文，看白話解釋",
     description:
       "自己貼上一條法規條文，整理成白話說明、要件、效果與用語解釋。本程式沒有法規資料、也不能上網，請先到全國法規資料庫複製現行條文。",
-    defaultModel: "gpt-5.6-luna",
+    defaultModel: "gpt-5.6-terra",
     fields: [
       { id: "law", label: "法規名稱與條號（可留空）", kind: "text", required: false },
       { id: "text", label: "條文原文", kind: "textarea", required: true, maxChars: 4_000 },

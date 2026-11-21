@@ -15,8 +15,8 @@ export interface ModelDef {
 }
 
 export const MODELS: readonly ModelDef[] = [
-  { id: "gpt-5.6-luna", label: "GPT-5.6 luna", group: "small", verified: true },
   { id: "gpt-5.6-terra", label: "GPT-5.6 terra", group: "small", verified: true },
+  { id: "gpt-5.6-luna", label: "GPT-5.6 luna", group: "small", verified: true },
   { id: "gpt-6.1-sol", label: "GPT-6.1 sol", group: "large", verified: true },
   { id: "gpt-6-astra", label: "GPT-6 astra", group: "large", verified: true },
 ];
@@ -26,7 +26,7 @@ export function selectableModels(): readonly ModelDef[] {
   return MODELS.filter((m) => m.verified);
 }
 
-export const DEFAULT_MODEL = "gpt-5.6-luna";
+export const DEFAULT_MODEL = "gpt-5.6-terra"; // 2026-11-21 起預設 terra（原 luna）
 
 export const GROUP_LABEL: Record<ModelGroup, string> = {
   large: "大模型組（sol／astra）",
